@@ -10,13 +10,14 @@ app = Flask(__name__)
 
 # ===== KONFIGURASI DATABASE AZURE MYSQL =====
 # ===== KONFIGURASI DATABASE AZURE MYSQL =====
-db = connector.connect {
+# ===== KONFIGURASI DATABASE AZURE MYSQL =====
+db = connector.connect(
     user="Sqladmin", 
     password="Admin_123", 
     host="ajimex.mysql.database.azure.com", 
     port=3306, 
-    database="designku_db",  
-}
+    database="designku_db"
+)
 
 # Kredensial Admin
 ADMIN_CREDENTIALS = {
