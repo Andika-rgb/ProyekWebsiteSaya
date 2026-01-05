@@ -10,13 +10,12 @@ app = Flask(__name__)
 
 # ===== KONFIGURASI DATABASE AZURE MYSQL =====
 # ===== KONFIGURASI DATABASE AZURE MYSQL =====
-DB_CONFIG = {
-    'host': os.getenv('DB_HOST', 'ajimex.mysql.database.azure.com'),
-    'user': os.getenv('DB_USER', 'Sqladmin'),
-    'password': os.getenv('DB_PASSWORD', 'Admin_123'),  # GANTI dengan password Anda!
-    'database': os.getenv('DB_NAME', 'designku_db'),  # GANTI dengan nama database Anda
-    'port': int(os.getenv('DB_PORT', 3306)),
-    'ssl_disabled': False  # Azure MySQL requires SSL
+db = connector.connect {
+    user="Sqladmin", 
+    password="Admin_123", 
+    host="ajimex.mysql.database.azure.com", 
+    port=3306, 
+    database="designku_db",  
 }
 
 # Kredensial Admin
